@@ -25,7 +25,7 @@ public class PanelTitulo extends JPanel{
      private JLabel etiquetaDiscoTienda;
      
     public PanelTitulo() {
-        setBackground(Color.WHITE);
+        setBackground(Color.MAGENTA);
         FlowLayout layout = new FlowLayout();
         layout.setHgap(0);
         layout.setVgap(0);
@@ -38,8 +38,7 @@ public class PanelTitulo extends JPanel{
         imagen.setIcon(icon);
         add(imagen);
         
-        setBackground(Color.WHITE);
-        
+       
         etiquetaDiscoTienda = new JLabel("DISCOTIENDA \n DISCOS 1000 ");
         add(etiquetaDiscoTienda);
         

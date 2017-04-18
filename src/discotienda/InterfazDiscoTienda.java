@@ -7,6 +7,7 @@ package discotienda;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -23,7 +24,7 @@ public class InterfazDiscoTienda extends JFrame{
     private PanelOpciones panelOpciones;
     
     public InterfazDiscoTienda(){
-        setTitle("PROGRAMA TRIANGULO");
+        setTitle("DISCOTIENDA");
         setSize(600, 600);
         setLocationRelativeTo(null);        
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -37,7 +38,7 @@ public class InterfazDiscoTienda extends JFrame{
         getContentPane().add(panelDiscos, BorderLayout.WEST);
         
         panelCanciones = new PanelCanciones( );
-        getContentPane().add(panelCanciones, BorderLayout.EAST);
+        getContentPane().add(panelCanciones, BorderLayout.CENTER);
         
         panelOpciones = new PanelOpciones( );
         getContentPane().add(panelOpciones, BorderLayout.SOUTH);

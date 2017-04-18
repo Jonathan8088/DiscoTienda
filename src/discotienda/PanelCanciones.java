@@ -7,6 +7,8 @@ package discotienda;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Polygon;
 import javax.swing.JPanel;
 
 /**
@@ -17,10 +19,18 @@ public class PanelCanciones extends JPanel{
 
     public PanelCanciones() {
         setBackground(Color.GRAY);
-        Dimension d = getSize();
-        System.out.print(d.getHeight() + " " + d.getWidth()); 
+        Dimension d = getSize(); 
     }
  
-    
-    
+   /*
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+      
+                
+        g.setColor(Color.red);
+      
+        
+    } 
+ */   
 }

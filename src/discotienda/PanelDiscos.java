@@ -6,19 +6,48 @@
 package discotienda;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+
 
 /**
  *
  * @author Jonathan
  */
-public class PanelDiscos extends JPanel{
+public class PanelDiscos extends JPanel implements ActionListener{
 
+     private JLabel discos;
+    
     public PanelDiscos() {
-        setLayout(new GridLayout(1, 3));
-        setBackground(Color.WHITE);
+        
+        setBackground(Color.CYAN);
+        Dimension d = getSize(); 
+        
+        
+        add( new JLabel( "Artista:" ));
+        JComboBox artista = new JComboBox();
+        add(artista);
+        
+        add( new JLabel( "                                 ") );
+        
+        
+        add( new JLabel( "Discos:" ));
+        JComboBox discos = new JComboBox();
+        add(discos);
+       
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       
+    }
+
+  
  
     
     

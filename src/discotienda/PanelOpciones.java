@@ -34,25 +34,35 @@ public class PanelOpciones  extends JPanel implements ActionListener{
         setLayout(new GridLayout(1, 3));
         setBackground(Color.WHITE);
         
-        btnArtista = new JButton("Cambiar Puntos");
+        btnArtista = new JButton("Crear Artista");
         btnArtista.setActionCommand(ARTISTA);
         btnArtista.addActionListener(this);
         add(btnArtista);
         
-        btnDiscos = new JButton("Cambiar Puntos");
-        btnDiscos.setActionCommand(ARTISTA);
+        btnDiscos = new JButton("Crear Disco");
+        btnDiscos.setActionCommand(DISCOS);
         btnDiscos.addActionListener(this);
         add(btnDiscos);
         
-        btnCanciones = new JButton("Cambiar Puntos");
-        btnCanciones.setActionCommand(ARTISTA);
+        btnCanciones = new JButton("Crear Canciones");
+        btnCanciones.setActionCommand(CANCIONES);
         btnCanciones.addActionListener(this);
         add(btnCanciones);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       switch (e.getActionCommand()) {
+            case ARTISTA:
+                DialogoArtista d= new DialogoArtista();
+                break;
+            case DISCOS:
+                DialogoDisco dis= new DialogoDisco();
+                break;        
+            case CANCIONES:
+                DialogoCanciones c= new DialogoCanciones();
+                break;
+        }
     }
  
     

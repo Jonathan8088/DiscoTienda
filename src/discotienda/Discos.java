@@ -5,6 +5,8 @@
  */
 package discotienda;
 
+
+
 /**
  *
  * @author Jonathan
@@ -38,6 +40,8 @@ public class Discos {
         this.imagen = imagen;
         this.precio = precio;
         this.canciones = canciones;
+        
+        
     }
 
     
@@ -45,6 +49,8 @@ public class Discos {
  * constructor vacio
  */
     public Discos() {
+        
+        
     }
 /**
  * retorna la descripcion del dicso
