@@ -10,5 +10,5 @@ package discotienda;
  * @author Jonathan
  */
 public enum Nacionalidad {
-    Australia,Belgica,Colombia,Dinamarca,España,Francia,Holanda,Inglaterra,Jamaica,Mexico,Nicaragua,Panama,Rusia,Suiza,Tailandia
+    SELECCION,Australia,Belgica,Colombia,Dinamarca,España,Francia,Holanda,Inglaterra,Jamaica,Mexico,Nicaragua,Panama,Rusia,Suiza,Tailandia
 }

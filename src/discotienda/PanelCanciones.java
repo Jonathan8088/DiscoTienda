@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Polygon;
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 /**
@@ -18,7 +19,8 @@ import javax.swing.JPanel;
 public class PanelCanciones extends JPanel{
 
     public PanelCanciones() {
-        setBackground(Color.GRAY);
+        setBorder(BorderFactory.createTitledBorder("Canciones"));
+        setBackground(Color.white);
         Dimension d = getSize(); 
     }
  

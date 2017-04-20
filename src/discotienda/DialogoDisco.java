@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -21,16 +22,24 @@ import javax.swing.JTextField;
 public class DialogoDisco extends JDialog implements ActionListener{
     
     private static final String ACEPTAR = "ACEPTAR";
+    
+    private static final String BUSCAR = "BUSCAR";
         
     private JTextField imagen;
     
     private JTextField descripcion;
     
-    private JTextField duracion;
+    private JTextField precio;
+    
+    private JButton buscar;
     
     private JButton aceptar;
+    
+    private Discos disco;
 
     public DialogoDisco() {
+        
+        Discos disco = new Discos();
         
         setLayout( new GridLayout( 10, 6 ) );
         setTitle( "CREAR DISCO" );
@@ -41,17 +50,23 @@ public class DialogoDisco extends JDialog implements ActionListener{
         JComboBox artista = new JComboBox();
         add(artista);
         
+        
         add( new JLabel( "Imagen:" ));
-        imagen = new JTextField();
-        add( imagen );
+        buscar = new JButton( "Buscar Archivo" );
+        buscar.setActionCommand( BUSCAR );
+        buscar.addActionListener(this);
+        add( buscar );
+        disco.setImagen(BUSCAR.getClass().toString());
         
         add( new JLabel( "Descripcion:" ));
         descripcion = new JTextField();
         add( descripcion );
+        disco.setDescripcion(descripcion.getText());
         
-        add( new JLabel( "Duracion:" ));
-        duracion = new JTextField();
-        add( duracion );
+        add( new JLabel( "precio:" ));
+        precio = new JTextField();
+        add( precio );
+        disco.setPrecio(precio.getText());
         
         add( new JLabel( ) );
         add( new JLabel( ) );
@@ -68,7 +83,14 @@ public class DialogoDisco extends JDialog implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        switch(e.getActionCommand()){
+            case BUSCAR:
+                JFileChooser file=new JFileChooser();
+                file.showOpenDialog(this);
+                break;
+            case ACEPTAR:
+                setVisible(false);
+        }
     }
     
     

@@ -25,26 +25,64 @@ public class InterfazDiscoTienda extends JFrame{
     
     public InterfazDiscoTienda(){
         setTitle("DISCOTIENDA");
-        setSize(600, 600);
+        setSize(800, 600);
         setLocationRelativeTo(null);        
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setLayout(new BorderLayout());
+        setResizable(false);
+        setLayout(null);
        
         
         panelImagen = new PanelTitulo( );
-        getContentPane().add(panelImagen, BorderLayout.NORTH);
+        panelImagen.setBounds(10, 10, 780, 130);
+        add(panelImagen);
         
         panelDiscos = new PanelDiscos( );
-        getContentPane().add(panelDiscos, BorderLayout.WEST);
+        panelDiscos.setBounds(10, 140, 390, 350);
+        add(panelDiscos);
         
         panelCanciones = new PanelCanciones( );
-        getContentPane().add(panelCanciones, BorderLayout.CENTER);
+        panelCanciones.setBounds(400, 140, 390, 350);
+        add(panelCanciones);
         
         panelOpciones = new PanelOpciones( );
-        getContentPane().add(panelOpciones, BorderLayout.SOUTH);
-        
+        panelOpciones.setBounds(10, 500, 780, 50);
+        add(panelOpciones);
         
         
          setVisible(true);
     }
+
+    public PanelTitulo getPanelImagen() {
+        return panelImagen;
+    }
+
+    public void setPanelImagen(PanelTitulo panelImagen) {
+        this.panelImagen = panelImagen;
+    }
+
+    public PanelDiscos getPanelDiscos() {
+        return panelDiscos;
+    }
+
+    public void setPanelDiscos(PanelDiscos panelDiscos) {
+        this.panelDiscos = panelDiscos;
+    }
+
+    public PanelCanciones getPanelCanciones() {
+        return panelCanciones;
+    }
+
+    public void setPanelCanciones(PanelCanciones panelCanciones) {
+        this.panelCanciones = panelCanciones;
+    }
+
+    public PanelOpciones getPanelOpciones() {
+        return panelOpciones;
+    }
+
+    public void setPanelOpciones(PanelOpciones panelOpciones) {
+        this.panelOpciones = panelOpciones;
+    }
+    
+    
 }

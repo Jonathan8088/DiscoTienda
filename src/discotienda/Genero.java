@@ -10,5 +10,5 @@ package discotienda;
  * @author Jonathan
  */
 public enum Genero {
-    Rock,Pop,Vallenato,Salsa,Merengue,Electronica
+    SELECCION,Rock,Pop,Vallenato,Salsa,Merengue,Electronica
 }

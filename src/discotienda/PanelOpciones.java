@@ -31,22 +31,25 @@ public class PanelOpciones  extends JPanel implements ActionListener{
     private JButton btnCanciones;
     
     public PanelOpciones() {
-        setLayout(new GridLayout(1, 3));
+        setLayout(null);
         setBackground(Color.WHITE);
         
         btnArtista = new JButton("Crear Artista");
         btnArtista.setActionCommand(ARTISTA);
         btnArtista.addActionListener(this);
+        btnArtista.setBounds(10, 10, 200, 40);
         add(btnArtista);
         
         btnDiscos = new JButton("Crear Disco");
         btnDiscos.setActionCommand(DISCOS);
         btnDiscos.addActionListener(this);
+        btnDiscos.setBounds(220, 10, 200, 40);
         add(btnDiscos);
         
         btnCanciones = new JButton("Crear Canciones");
         btnCanciones.setActionCommand(CANCIONES);
         btnCanciones.addActionListener(this);
+        btnCanciones.setBounds(430, 10, 200, 40);
         add(btnCanciones);
     }
 

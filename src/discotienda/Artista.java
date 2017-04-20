@@ -17,25 +17,23 @@ public class Artista {
     /**
      * atributo que contiene el genero del artista
      */
-    private String genero;
+    private Genero genero;
     /**
      * atributo que contiene la nacionalidad del artista
      */
-    private String nacionalidad;
+    private Nacionalidad nacionalidad;
     /**
      * atributo que contiene los discos del artista
      */
     private Discos discos;
 
-    public Artista(String nombre, String genero, String nacionalidad, Discos discos) {
+    public Artista(String nombre, Genero genero, Nacionalidad nacionalidad) {
         this.nombre = nombre;
         this.genero = genero;
         this.nacionalidad = nacionalidad;
-        this.discos = discos;
+        
     }
-
-    public Artista() {
-    }
+    
 
     public String getNombre() {
         return nombre;
@@ -45,19 +43,19 @@ public class Artista {
         this.nombre = nombre;
     }
 
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
-    public String getNacionalidad() {
+        public Nacionalidad getNacionalidad() {
         return nacionalidad;
     }
 
-    public void setNacionalidad(String nacionalidad) {
+    public void setNacionalidad(Nacionalidad nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
 

@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,22 +23,36 @@ import javax.swing.JPanel;
 public class PanelDiscos extends JPanel implements ActionListener{
 
      private JLabel discos;
+     
+     private JLabel artist;
+     
+     private JLabel disco;
+     
+     JComboBox artista;
     
     public PanelDiscos() {
         
-        setBackground(Color.CYAN);
+        setBorder(BorderFactory.createTitledBorder("Discos"));
+        
+        setBackground(Color.WHITE);
         Dimension d = getSize(); 
+        setLayout(null);
         
-        
-        add( new JLabel( "Artista:" ));
+        artist = new JLabel ("Artista");
+        artist.setBounds(50, 30, 50, 20);
+        add(artist);
         JComboBox artista = new JComboBox();
+        artista.setBounds(100, 30, 150, 20);
         add(artista);
         
-        add( new JLabel( "                                 ") );
         
         
-        add( new JLabel( "Discos:" ));
+        
+        disco = new JLabel ("Disco");
+        disco.setBounds(50, 60, 50, 20);
+        add(disco);
         JComboBox discos = new JComboBox();
+        discos.setBounds(100, 60, 150, 20);
         add(discos);
        
     }
@@ -48,7 +63,9 @@ public class PanelDiscos extends JPanel implements ActionListener{
     }
 
   
- 
+ public void actualizarArtista(String nombreArtista) {
+        artista.addItem(nombreArtista);
+    }
     
     
 }
